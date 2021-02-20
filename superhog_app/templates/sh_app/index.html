@@ -8,12 +8,36 @@ Superhog strona główna
 
 {% block article %}
 
-<p>
-    Strona główna, ale na razie raczej gówna.
-</p>
+<div class = "lc1">
+    <div class = "side1 wide_opt"></div>
+    <div class = "main1"> 
+        <p>
+            Cześć,<br/>
+            Miło, że postanowiliście odwiedzić moją stronę 🙂 <br/>
+        </p>
 
-<p>
-    Jebać administarcję AXMC
-</p>
+        <p>
+            Przedstwiam Wam napisane przez mnie programy (głównie w c++, ale także czasami w Javie i Pythonie).
+            Strona ta powstała z naciskiem na udokumentowanie pisanej przeze mnie gry "Superhog" oraz powiązanego z nim edytora poziomów.
+            Poza nim zamierzam również w skrócie przedstawić pozostałe ważniejsze programy z mojego portfolio.
+        </p>
+        <p>
+            Strona działa aktualnie z wykorzystaniem pythonowego frameworku <a href = "https://www.djangoproject.com/">Django</a>.
+        </p>
+
+        <p>
+            Dlaczego zdecydowałem się na takie jaskrawe motywy? Przede wszystkim zależało mi, aby ta strona absolutnie nie wyglądała jak 
+            jakaś typowa wizytówka cuchnącej negatywnymi aspektami kapitalizmu korporacji. Poza tym chciałem też nawiązać do motywów
+            graficznych pojawiających się w moich programach.
+        </p>
+
+        <button onclick="document.getElementById('file-input').click();">Open</button>
+        <input id="file-input" type="file" name="name" style="display: none;" />
+
+    </div>
+    <div class = "side1">
+
+    </div>
+</div>
 
 {% endblock %}

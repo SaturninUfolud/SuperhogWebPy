@@ -1,0 +1,59 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+{% block title %}
+Elephant
+{% endblock %}
+
+
+{% block article %}
+
+<div class = "lc1">
+
+    <div class = "side1 wide_opt" style="background-image: url({% static 'sh_app/elephant1.jpg' %}); background-size: 100% 100%;">
+        <!-- <img src="elephant1.jpg" style="width: 100%; height: auto;"/> -->
+    </div>
+
+    <div class = "main1">
+        <p>Zapraszam wszystkich do pobrania programu trąbiącego.
+            Najśmieszniej na cudzym komputerze. 😉 xD
+            
+            Ogólnie program służy trollowaniu użytkowników Windowsa o małej
+            znajomości informatyki.
+
+            <ol>
+                <li>
+                    Pobieramy archiwum "elephant.7z"
+                </li>
+                <li>
+                    Rozpakowujemy (jeśli u kogoś to można do jakiegoś ukrytego katalogu, czy coś w tym stylu, żeby nie znalazł co się dzieje jak AppData).
+                </li>
+                <li>
+                    Uruchamiamy (wystarczy tylko raz;-) )program elephant.exe.
+                </li>
+                <li>
+                    Słuchamy trąbienia słonia przy pisaniu na klawiaturze, czy kliknięciu myszką.
+                    Po pewnym czasie odpala się głupkowata piosenka o słoniach.
+                </li>
+                <li>
+                    Możemy trochę poeksperymentować i dodać program do autostartu w Windowsie.
+                </li>
+            </ol>
+            MIŁEJ ZABAWY 😉
+            Słoniocy.</p>
+    </div>
+
+    <div class = "side2-download">
+        <p>Do pobrania program trąbiący<br/>
+            Oraz kod źródłowy.
+        </p>
+        <button class="download1"
+        onclick = "window.open(
+         'https://drive.google.com/drive/folders/0BxDvxLuXjFS0emdiVXhGSWptems?fbclid=IwAR3GGyYpOgS9kJzmSscNtJU24HAGUt2KVL5uOjzvhAmzc6S2a6tuTGsOfjE',
+         '_blank');return false;">
+        <i class="fa fa-download"></i> Download<img src="{% static 'sh_app/elephant.png' %}" alt="elephant icon"/></button>
+    </div>
+
+</div>
+
+{% endblock %}

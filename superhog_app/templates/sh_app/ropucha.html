@@ -1,0 +1,105 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+{% block title %}
+Ropuch XD
+{% endblock %}
+
+
+{% block article %}
+
+<div class = "lc1">
+    <div class = "side1 wide_opt" style="margin-left:20px; margin-top: 20px;">
+        <img src = "{% static 'sh_app/ropuch/01.png' %}"/>
+    </div>
+
+    <div class ="main1">
+
+        <p>                
+            Zapraszam do pobrania mojej nowej gierki "Ropucha"<br/>
+            Wersja B1 napisana w c++ i SDL2 oraz odpowiadający jej klon, wersja J3 napisana w Javie i LWJGL3.
+            <ul>
+            <li>
+                Cel gry: zjeść jak najwięcej much, 🙂
+            </li>
+            <li>
+                Steruj strzałkami,
+            </li>
+            <li>
+                F2 - pauza,
+            </li>
+            <li>
+                F3 - pokaż/ukryj energię i wynik,
+            </li>
+            <li>
+                SPACE - wysuń język, żeby zjeść muchę,
+            </li>
+            <li>
+                DELETE - wyjście z gry,
+            </li>
+            <li>
+                ESCAPE - wyjście z programu.
+            </li>
+            </ul>
+            Uważaj na złe potwory!<br/>
+            Miłej zabawy.
+        </p>
+        <p>
+            Na stronie zamieściłem również screenshoty z historycznych oraz eksperymentalnych
+            wersji gry (Ropucha 4 i Ropucha B2) w ramach ciekawostki. Nie są one dostępne do pobrania.
+        </p>
+    </div>
+
+    <div class ="side2-download">
+        <p>Do pobrania Ropucha B1 oraz J3</p>
+        <button class="download1"
+        onclick = "window.open(
+         'https://onedrive.live.com/?authkey=%21AN3xg1Sb3%2Dh%2Dk%2Dw&id=C5FDA11230EC2610%21725&cid=C5FDA11230EC2610',
+         '_blank');return false;">
+        <i class="fa fa-download"></i> Download <i class="fas fa-frog"></i></button>
+    </div>
+</div>
+
+<div class = "gc1">
+
+    <div class = "g1">
+        <a href="{% static 'sh_app/ropuch/start_screen.jpg' %}" target="_blank">
+            <img src= "{% static 'sh_app/ropuch/start_screen.jpg' %}" >
+        </a>
+        <div class ="desc">
+            Ekran startowy ropucha. Tak wiem, że nie ropucha tylko rzekotka zielona 
+            <span style="font-style: italic;">Hyla arborea</span>, ale uznałem, że tak będzie ładnie wyglądało.
+        </div>
+    </div>
+
+    <div class = "g1">
+        <a href="{% static 'sh_app/ropuch/game_over.jpg' %}" target= "_blank">
+            <img src = "{% static 'sh_app/ropuch/game_over.jpg' %}">
+        </a>
+
+        <div class = "desc">
+            Zdechła ropucha na screenshocie "GAME OVER"
+        </div>
+    </div>
+
+    <div class = "g1">
+        <a href="{% static 'sh_app/ropuch/s1.png' %}" target= "_blank">
+            <img src = "{% static 'sh_app/ropuch/s1.png' %}">
+        </a>
+       <div class = "desc">
+            Screenshot z Ropuchy J3
+        </div>
+    </div>
+
+    <div class = "g1">
+        <a href="{% static 'sh_app/ropuch/s2.png' %}" target= "_blank">
+            <img src = "{% static 'sh_app/ropuch/s2.png' %}">
+        </a>
+       <div class = "desc">
+            Screenshot ze starej Ropuchy4
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

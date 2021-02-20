@@ -1,4 +1,6 @@
 {% extends "sh_app/base.html" %}
+{% load static %}
+
 
 {% block title %}
 Superhog
@@ -12,5 +14,75 @@ Superhog
     Za siedmioma górami, za siedmioma lasami była kraina zwana AXMC.
     Rządził nią wieprz-tyran zwący się Fraj3rD3aTh.
 </p>
+
+<div class="lc1">
+    <div class="side1">
+
+    </div>
+    <div class="main1">
+        <p>
+            W tym artykule zamierzam przedstawić grę, nad którą pracuję. Początkowo miała 
+            być ona głównym tematem na tej stronie, a mianowicie "Superhoga".
+        </p>
+        <p>
+            Gra planowo będzie napisana w  całości w c++ i Pythonie 3, kod hybrydowy, główna część w c++, a niektóre skrypty w Pythonie3.
+            Piszę ją kompletnie od podstaw, jako swego rodzaju informatyczny eksperyment, tzw nie używam gotowych frameworków takich jak Unity,
+            a wszystkie mechanizmy w tym kolizje i fizykę gry implementuję samemu. Do renderowania grafiki używam biblioteki
+            <a href="http://libsdl.org"> SDL2 </a>, ale rozważam też czy nie lepiej przejść na <a href="https://www.sfml-dev.org">SFML</a>.
+        </p>
+
+        <p>
+            Superhog to platformowa gra dla każdego. Głównym bohaterem jest tytułowy Superwieprzek, który kiedyś był szalonym naukowcem,
+            ale w wyniku skutku ubocznego eksperymentu zamienił się w świnioluda.
+         </p>
+         <p>
+            Gra jest na we wstępnej fazie produkcji. Napisałem już działającego snapshota, z którego filmiki i screenshoty zamieściłem na stronie.
+            Jednak optymalizacja kodu pozostawia na razie jeszcze wiele do życzenia, zatem pewnie napiszę kolejna wersję gruntownie od nowa,
+            wzorując się na poprzedniej. Napisałem również w miarę funkcjonalny edytor poziomów, do którego dokumentacji link znajduje się w pasku nawigacji.
+         </p>
+    </div>
+    <div class="side1">
+        
+    </div>
+
+</div>
+
+<div class = "gc1">
+
+    <div class = "g1">
+        <a href="{% static 'sh_app/sh/s2.png' %}" target="_blank">
+            <img src= "{% static 'sh_app/sh/s2.png' %}" >
+        </a>
+        <div class ="desc">
+            Screenshot z widocznymi duszkami
+        </div>
+    </div>
+
+    <div class = "g1">
+        <a href="{% static 'sh_app/sh/s3.png' %}" target="_blank">
+            <img src= "{% static 'sh_app/sh/s3.png' %}" >
+        </a>
+        <div class ="desc">
+            Test generowania lasu z potworami
+        </div>
+    </div>
+
+    <div class = "g1">
+        
+        <video controls style="width:100%;max-width: 800px; height: auto;">
+            <source src="{% static 'sh_app/sh/sh_proof.mp4' %}" type="video/mp4">
+        </video>
+
+        <div class ="desc">
+            <p>
+            Filmik nagrany ze snapshota, poziom z duszkami, efekt śmierci bohatera. Użyta w grze muzyka:
+            <a href="https://www.youtube.com/watch?v=C9SQcO3Zins">
+            Urszula "Malinowy król"</a>
+
+            </p>
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}

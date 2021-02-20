@@ -1,0 +1,122 @@
+
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+{% block title %}
+Elephant
+{% endblock %}
+
+
+{% block article %}
+
+<div class="lc1">
+        
+    <div class="main1">
+        <p>
+            Instrukcja obsługi edytora poziomów do Superhoga:
+    <ol>
+        <li>
+            Skróty klawiszowe
+            <ul>                   
+                <li>
+                    ESCAPE - wyjście z programu                        
+                </li>
+
+                <li>
+                    ALT + s - zapisz poziom
+                </li>
+
+                <li>
+                    ALT + o - otwórz zapisany poziom
+                </li>
+
+                <li>
+                    F2 - pauza
+                </li>
+                <li>
+                    F3 - włącz/wyłącz tryb siatki
+                </li>
+                <li>
+                    F4 - pokaż/ukryj okienko wyboru kafelków
+                </li>
+                <li>
+                    F5 - włącz/wyłącz animację kafelków
+                </li>
+
+                <li>
+                    q - Zaznacz fragment planszy
+                </li>
+
+                <li>
+                    CTRL + c - skopiuj zaznaczone
+                </li>
+
+                <li>
+                    CTRL + V - wklej zaznaczone
+                </li>
+
+                <li>
+                    HOME - przejdź do lewej krawędzi planszy
+                </li>
+
+                <li>
+                    CTRL + HOME - przejdź do górnej krawędzi planszy
+                </li>
+                <li>
+                    END - przejdź do prawj krawędzi planszy
+                </li>
+
+                <li>
+                    CTRL + END - przejdź do dolnej krawędzi planszy
+                </li>
+                <li>
+                    ALT + HOME - przejdź do pozycji startowej gracza
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li>
+            Mysza
+            <ul>
+                <li>
+                    Lewy przycsik - zmień zawartość kafelka
+                </li>
+                <li>
+                    Prawy przycisk - przewijaj mapę
+                </li>
+            </ul>
+        </li>
+
+    </ol>
+
+        </p>
+    </div>
+
+    <div class="gc1 side1">
+
+        <div class = "g1", style="height: 250px;">
+            <a href="{% static 'sh_app/sh/les1.png' %}" target="_blank">
+                <img src= "{% static 'sh_app/sh/les1.png' %}" >
+            </a>
+            <div class ="desc">
+                Tryb siatki właczony
+            </div>
+        </div>
+
+        <div class = "g1" style="height: 250px;">
+            <a href="{% static 'sh_app/sh/les3.png' %}" target="_blank">
+                <img src= "{% static 'sh_app/sh/les3.png' %}" >
+            </a>
+
+            <div class ="desc">
+                Tryb bez siatki
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
