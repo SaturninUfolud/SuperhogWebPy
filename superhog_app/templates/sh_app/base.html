@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'sh_app/superhog.css' %}">
+    
+    <script src="{% static 'sh_app/walking_hog.js' %}"></script>
+    <script src="{% static 'sh_app/responsive.js' %}"></script>
+    
+    <title> {% block title %}{% endblock %} </title>
+</head>
+
+
+<body>
+
+    <header class="SH-Header">
+        <h1>
+            <img src="{% static 'sh_app/hog1.png' %}" id="static_hog" style ="position: relative;"  onclick="walking_hog()"/>
+            <img src="{% static 'sh_app/walking_hog.gif' %}" id="walking_hog" style="position:relative; display: none;" />
+            
+            <span class = "xd">Superhog</span></h1>
+
+
+        {% include "sh_app/nav.html" %}        
+    </header>
+
+    <article>
+
+        {% block article %}
+        {% endblock %}
+        
+    </article>
+
+
+</body>

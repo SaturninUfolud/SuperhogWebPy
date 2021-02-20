@@ -1,0 +1,30 @@
+{% load lineage %}
+
+<nav>
+    <div class="topnav" id="myTopnav">
+        <a href="/index" class=" {% ancestor '/index' %}">Home</a>
+        <div class="dropdown">
+
+            <button class="dropbtn">Superhog
+                <i class="fa fa-caret-down"></i> </button>
+            
+            <div class ="dropdown-content">
+
+                <a href="/superhog" class=" {% ancestor '/superhog' %}">
+                    O Wieprzu</a>
+                <a href="/levels_editor " class=" {% ancestor '/levels_editor' %}">
+                    Edytor Poziomów</a>
+                <a href="/creatures" class=" {% ancestor '/creatures' %}">
+                    Potwory</a>
+            </div>
+        </div>
+
+        <a href="/ropucha" class=" {% ancestor '/ropucha' %}">Ropucha</a>
+        <a href="/elephant" class=" {% ancestor '/elephant' %}">Słoń</a>
+        <a href="/contact_me" class=" {% ancestor '/contact_me' %}">Kontakt</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="navBarOnClick()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</nav>

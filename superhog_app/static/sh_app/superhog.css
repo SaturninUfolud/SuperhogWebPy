@@ -1,0 +1,298 @@
+#AnimatedHog {
+    position: relative;
+
+}
+
+
+
+h1 {
+    display: flex;
+    align-items:center;
+    margin-bottom: 0px;
+}
+
+
+body {
+    background-image: url("forest1.jpg");
+}
+
+ 
+.xd {
+    letter-spacing: 20px;
+    
+    color: rgb(129, 9, 9);
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+
+.topnav {
+    border-style: solid;
+    border-width: medium;
+    
+    border-color: darkviolet;
+    background-color: rgb(22, 14, 133);
+    color: rgb(0, 255, 0);
+    overflow: hidden;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(43, 184, 62);
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: rgb(4, 122, 177);
+    color: yellow;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+
+}
+
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(43, 184, 62);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+
+    border-style: solid;
+    border-width: medium;
+    border-color: darkviolet;
+
+    background-color: rgb(22, 14, 133);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover 
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }*/
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+article {
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(51, 255, 0);
+    background-color: white;
+    display: block;
+}
+
+.lc1 {
+    display: flex;
+}
+
+.main1 {
+    max-width: 700px;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    display: block;
+
+    /* background-color: blue; */
+}
+
+.side1 {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    /* background-color: orange; */
+}
+
+.side2-download {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    /* background-color: red; */
+    margin-top: 10px;
+    
+}
+
+/*Opcjonalne elementy, na małych ekranach znikają*/
+
+
+.download1 {
+    background-color: rgb(0,255,0);
+    border: none;
+    color: blue;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.download1 img{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+  /* Darker background on mouse-over */
+.download1:hover {
+    background-color: green;
+    color: cyan;
+}
+
+.gc1{
+    margin-top: 50px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.g1 {
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(51, 255, 0);
+    background-color: white;
+    margin: 5px;
+    float: left;
+    display: block;
+    width: 360px;
+    height: 300px;
+    
+}
+
+
+.g1:hover {
+    border-color: rgb(255, 136, 0);
+}
+
+.g1 img {
+    width: 100%;
+    height: auto;
+}
+
+.g1 desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.google-ad-placeholder{
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(140, 0, 255);
+    background-color: rgb(136, 101, 233);
+    color: rgb(255, 136, 0);
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .lc1
+    {
+        -webkit-flex-direction: column;
+        flex-direction: column;        
+    }
+
+    /* Opcjonalna elementy na dużych ekranach, na małych znikają*/
+    .wide_opt {
+        display: none;
+    }
+
+    /* .g1 {
+        width: 180px;
+        height: 200px;
+    } */
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      
+    }    
+}
