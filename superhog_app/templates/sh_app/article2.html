@@ -10,8 +10,26 @@
 {% block article %}
 
 
-<h1> {{article.title}} </h1>
+<h1 class = "sh-article-title"> {{article.title}} </h1>
 
-{{article.content |safe }}
+
+<p class = "sh-article-content">
+    {{article.basic_description}}
+</p>
+
+{% for section in article.articlesection_set.all %}
+
+<div class = "sh-article-section">
+    <h2 class = "sh-article-section-title">
+        {{section.title}}
+    </h2>
+
+    <p class = "sh-article-section-content">
+        {{section.content}}
+    </p>
+
+</div>
+
+{% endfor %}
 
 {% endblock %}

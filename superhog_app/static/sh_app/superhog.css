@@ -134,6 +134,29 @@ article {
     display: block;
 }
 
+
+.sh-article-title {
+
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(77, 0, 150);
+}
+
+.sh-article-section-title {
+    font-weight: bold;
+    font-size: 24px;
+    color:rgb(58, 121, 0);
+}
+
+.sh-article-content {
+    font-weight: normal;
+    color: black;
+    font-size: 16px;
+}
+
+
+
+
 .lc1 {
     display: flex;
 }
