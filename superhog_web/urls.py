@@ -22,3 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("polls/", include("polls.urls", namespace="polls")),
 ]
+
+handler404 = 'superhog_app.views.galazar404'

@@ -11,6 +11,12 @@ class ArticleView(generic.DetailView):
     template_name = "sh_app/article2.html"
 
 
+
+def galazar404(request, exception):
+    return render(request, 'sh_app/galazar404.html', status=404)
+
+
+
 def article_page(request, article_id):
 
     print("article_id = "+str(article_id))
