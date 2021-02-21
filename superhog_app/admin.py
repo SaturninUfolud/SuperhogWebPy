@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Article, ArticleSection
+from .models import Article, ArticleSection, ExternalFileInfo
 
 
 class ArticleSectionsInline(admin.StackedInline):
@@ -17,5 +17,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 admin.site.register(Article,ArticleAdmin)
 
+
+admin.site.register(ExternalFileInfo)
 
 # Register your models here.

@@ -14,7 +14,8 @@ class ExternalFileInfo(models.Model):
         (0, "Picture"),
         (1, "Video"),
         (2, "Text"),
-        (3, "Other")
+        (3, "Source code"),
+        (4, "Other"),
     ]
 
     filetype = models.SmallIntegerField(choices = FILE_TYPE_CHOICES, default=PICTURE)
@@ -37,7 +38,6 @@ class Article(models.Model):
     title = models.CharField(max_length = 60)
     publication_date = models.DateTimeField(auto_now_add=True, blank=True)
     basic_description = models.TextField(default="")
-
 
     def __str__(self):
         return self.title
