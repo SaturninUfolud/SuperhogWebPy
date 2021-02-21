@@ -1,14 +1,32 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from django.urls import reverse
-from django.views import generic
-
 from django.template import loader
 
+from .models import Article, ArticleSection
+
+from django.views import generic
+
+class ArticleView(generic.DetailView):
+    model = Article
+    template_name = "sh_app/article2.html"
 
 
-def index(request):
-    return render(request, "sh_app/index.html")
+def article_page(request, article_id):
 
-def superhog_main(request):
-    return render(request, "sh_app/superhog.html")
+    print("article_id = "+str(article_id))
+
+    content = """
+    <p> Rzaba okumkawa </p>
+    <p> Szukasz artykułu z id = {}
+    <p style="color:green;"> Zalogowany użytkownik {} </p>
+    """
+
+    user_name = "NOT LOGGED IN"
+    if request.user.is_authenticated:
+        user_name = request.user.username
+
+    context = {"content1": content.format(article_id, user_name),
+                "title1": "rzaba"}
+
+    return render(request , "sh_app/article_generic1.html", context)
+

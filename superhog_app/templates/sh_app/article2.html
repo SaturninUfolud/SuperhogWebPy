@@ -1,0 +1,17 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+{% block title %}
+
+{{article.title}}
+
+{% endblock %}
+
+{% block article %}
+
+
+<h1> {{article.title}} </h1>
+
+{{article.content |safe }}
+
+{% endblock %}

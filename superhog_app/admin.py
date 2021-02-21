@@ -10,6 +10,7 @@ class ArticleSectionsInline(admin.StackedInline):
 class ArticleAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['title']}),
+        (None, {'fields': ['basic_description']}),
     ]
 
     inlines = [ArticleSectionsInline]

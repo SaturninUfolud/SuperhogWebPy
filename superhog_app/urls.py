@@ -13,13 +13,16 @@ urlpatterns = [
     path('', lambda req: redirect(reverse('sh_app:index'))),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('sh_app/favicon.ico'))),
 
-    path('index', views.index, name='index'),
-    path('superhog', views.superhog_main, name="superhog"),
+    path('index', lambda request: render(request,"sh_app/index.html"), name='index'),
+    path('superhog', lambda request: render(request,"sh_app/superhog.html"), name="superhog"),
 
     path('contact_me', lambda request: render(request,"sh_app/contact_me.html"), name="contact_me"),
     path('ropucha', lambda request: render(request,"sh_app/ropucha.html"), name="ropucha"),
     path('elephant', lambda request: render(request,"sh_app/elephant.html"), name="elephant"),
     path('levels_editor', lambda request: render(request,"sh_app/levels_editor.html"), name="levels_editor"),
+
+    path('article<int:pk>', views.ArticleView.as_view(), name = "article"),
+    path('article_test<int:article_id>', views.article_page, name = "article_test"),
 ]
 
 app_name = 'sh_app'
