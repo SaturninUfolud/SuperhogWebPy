@@ -23,7 +23,7 @@ urlpatterns = [
     path('test', lambda request: render(request, "sh_app/test1.html"), name="test"),
 
     path('article<int:pk>', views.ArticleView.as_view(), name = "article"),
-    path('article_test<int:article_id>', views.article_page, name = "article_test"),
+    path('article_test<int:article_id>', views.article_page_test, name = "article_test"),
 ]
 
 app_name = 'sh_app'

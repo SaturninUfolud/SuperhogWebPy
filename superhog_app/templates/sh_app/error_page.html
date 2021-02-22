@@ -1,0 +1,24 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+
+{% block title %}
+
+{{title1}}
+
+{% endblock %}
+
+
+{% block article %}
+<div class = "sh-article galazar1">
+
+    {% for log in logs %}
+
+    <p>
+        {{log|safe}}
+    </p>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

@@ -8,15 +8,15 @@
 
         {% if file1.filetype == 0 %}
 
-        <a href = "{% static file1.get_url() %}" target="_blank">
-            <img src = "{% static file1.get_url() %}"/>
+        <a href = "{% static file1.get_url %}" target="_blank">
+            <img src = "{% static file1.get_url %}"/>
 
         </a>
 
         {% elif file.filetype == 1 %}
 
         <video controls style="width:100%; max-width: 800px; height: auto;">
-            <source src="{% static file1.get_url() %}" type="video/mp4"/>
+            <source src="{% static file1.get_url %}" type="video/mp4"/>
 
         </video>
 
