@@ -1,0 +1,36 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+{% block title %}
+Potwory w Superhogu
+{% endblock %}
+
+{% block article %}
+
+<div class = "sh-article">
+
+<h1 class = "sh-article-title">Potwory w Superhogu:</h1>
+
+{% if articles_list %}
+
+<ul>
+
+    {% for a1 in articles_list %}
+
+    <li>
+        <a href="/article{{a1.id}}"> {{a1.title}} </a>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+{% else %}
+
+<p class = "galazar1"> Nie ma jeszcze artykułów o potworach </p>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

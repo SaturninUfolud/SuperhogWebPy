@@ -18,6 +18,12 @@ class ArticleView(generic.DetailView):
     model = Article
     template_name = "sh_app/article2.html"
 
+class CreaturesListView(generic.ListView):
+    template_name = "sh_app/creatures.html"
+    context_object_name = "articles_list"
+
+    def get_queryset(self):
+        return Article.objects.filter(article_type=Article.SH_CREATURE).order_by('title')
 
 
 def galazar404(request, exception):

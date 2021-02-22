@@ -20,10 +20,12 @@ urlpatterns = [
     path('ropucha', lambda request: render(request,"sh_app/ropucha.html"), name="ropucha"),
     path('elephant', lambda request: render(request,"sh_app/elephant.html"), name="elephant"),
     path('levels_editor', lambda request: render(request,"sh_app/levels_editor.html"), name="levels_editor"),
-    path('test', lambda request: render(request, "sh_app/test1.html"), name="test"),
-
+    
+    path('creatures', views.CreaturesListView.as_view(), name ="creatures"),
     path('article<int:pk>', views.ArticleView.as_view(), name = "article"),
-    path('article_test<int:article_id>', views.article_page_test, name = "article_test"),
+    
+    path('test_galazar404', lambda request: render(request, "sh_app/galazar404.html"), name="test_galazar404"),
+    path('test_article<int:article_id>', views.article_page_test, name = "article_test"),
 ]
 
 app_name = 'sh_app'

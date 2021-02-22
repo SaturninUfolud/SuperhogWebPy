@@ -4,10 +4,10 @@ from django.db import models
 
 
 class ExternalFileInfo(models.Model):
-    PICTURE = 0,
-    VIDEO_MP4 = 1,
-    TEXT = 2,
-    SOURCE_CODE = 3,
+    PICTURE = 0
+    VIDEO_MP4 = 1
+    TEXT = 2
+    SOURCE_CODE = 3
     OTHER = 4
 
     FILE_TYPE_CHOICES = [
@@ -35,11 +35,28 @@ class ExternalFileInfo(models.Model):
 
 
 class Article(models.Model):
+    
+    SH_MISC = 0
+    SH_GAMEPLAY = 1
+    SH_CREATURE = 2
+    SH_SOURCE_CODE = 3
+
+    OTHER = 10
+
+    ARTICLE_TYPE_CHOICES = [
+        (0, "Superhog różne"),
+        (1, "Superhog rozgrywka"),
+        (2, "Superhog potwory"),
+        (3, "Superhog kod źródłowy"),
+        (10, "Inne programy"),
+    ]
+    
     title = models.CharField(max_length = 60)
     publication_date = models.DateTimeField(auto_now_add=True, blank=True)
     basic_description = models.TextField(default="")
-
     gallery = models.ManyToManyField(ExternalFileInfo)
+
+    article_type = models.SmallIntegerField(choices=ARTICLE_TYPE_CHOICES, default=SH_MISC)
 
     def __str__(self):
         return self.title
