@@ -2,7 +2,7 @@
 
 <div class = "gc1">
 
-    {% for file1 in image_set %}
+    {% for file1 in image_set.all %}
 
     <div class = "g1">
 
@@ -13,7 +13,7 @@
 
         </a>
 
-        {% elif file.filetype == 1 %}
+        {% elif file1.filetype == 1 %}
 
         <video controls style="width:100%; max-width: 800px; height: auto;">
             <source src="{% static file1.get_url %}" type="video/mp4"/>
@@ -25,7 +25,7 @@
         <div class="desc">
 
             <p>
-                {{file.description}}
+                {{file1.description}}
             </p>
 
         </div>        

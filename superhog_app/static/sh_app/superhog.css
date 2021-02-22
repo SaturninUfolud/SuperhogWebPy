@@ -280,10 +280,12 @@ article {
     height: auto;
 }
 
-.g1 desc {
-    padding: 15px;
+.g1 .desc {
     text-align: center;
 }
+
+
+
 
 .google-ad-placeholder{
     border-style: solid;

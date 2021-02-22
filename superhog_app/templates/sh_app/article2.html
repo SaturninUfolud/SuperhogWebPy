@@ -33,19 +33,10 @@
 
 </div>
 
-{% endfor %}
-
-{% for image in article.gallery.all %}
-
-<p>
-    {{image.description}}
-</p>
-
-<p>
-    {{image.get_url}}
-</p>
 
 {% endfor %}
+
+{% include "sh_app/image_gallery.html" with image_set=article.gallery %}
 
 
 </div>
