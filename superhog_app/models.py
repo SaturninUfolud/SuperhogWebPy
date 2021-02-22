@@ -39,6 +39,8 @@ class Article(models.Model):
     publication_date = models.DateTimeField(auto_now_add=True, blank=True)
     basic_description = models.TextField(default="")
 
+    gallery = models.ManyToManyField(ExternalFileInfo)
+
     def __str__(self):
         return self.title
 

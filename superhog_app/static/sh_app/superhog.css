@@ -55,6 +55,11 @@ body {
     color: black;
 }
 
+.topnav a:focus {
+    background-color: rgb(255, 153, 0);
+    color: black;
+    }
+
 /* Add an active class to highlight the current page */
 .topnav a.active {
     background-color: rgb(4, 122, 177);
@@ -90,7 +95,12 @@ body {
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(43, 184, 62);
   }
-  
+
+  /* .navbar a:focus, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 153, 0);
+    color: black;
+    }
+   */
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
@@ -134,6 +144,11 @@ article {
     display: block;
 }
 
+
+.sh-article {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .sh-article-title {
 
@@ -182,6 +197,24 @@ article {
     /* background-color: orange; */
 }
 
+.centered1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.galazar1{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color:rgb(58, 121, 0);
+}
+
+
 .side2-download {
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -221,8 +254,7 @@ article {
 .gc1{
     margin-top: 50px;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .g1 {
