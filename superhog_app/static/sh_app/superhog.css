@@ -145,6 +145,25 @@ article {
 }
 
 
+.sh-articles-list {
+    list-style-type: "→"
+}
+
+.sh-articles-list a{
+    color:rgb(255, 0, 64);
+    font-size: 20px;
+}
+
+.sh-articles-list a:hover{
+    color:rgb(211, 95, 0);
+}
+
+.sh-articles-list a:focus{
+    color:rgb(0, 82, 136);
+}
+
+
+
 .sh-article {
     padding-left: 10px;
     padding-right: 10px;

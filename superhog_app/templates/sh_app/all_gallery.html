@@ -1,0 +1,20 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+
+{% block title %}
+Galeria
+{% endblock %}
+
+
+{% block article %}
+
+<div class = "sh-article">
+
+<h1 class = "sh-article-title">Galeria:</h1>
+
+{% include "sh_app/image_gallery.html" with image_set=gallery %}
+
+</div>
+
+{% endblock %}

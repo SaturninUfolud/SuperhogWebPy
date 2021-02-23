@@ -6,7 +6,7 @@ from django.views import generic
 
 import os
 
-from .models import Article, ArticleSection
+from .models import Article, ExternalFileInfo
 from .forms import UploadFileForm
 
 
@@ -24,6 +24,13 @@ class CreaturesListView(generic.ListView):
 
     def get_queryset(self):
         return Article.objects.filter(article_type=Article.SH_CREATURE).order_by('title')
+
+class GalleryView(generic.ListView):
+    template_name = "sh_app/all_gallery.html"
+    context_object_name = "gallery"
+
+    def get_queryset(self):
+        return ExternalFileInfo.objects.all()
 
 
 def galazar404(request, exception):

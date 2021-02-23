@@ -22,6 +22,8 @@ urlpatterns = [
     path('levels_editor', lambda request: render(request,"sh_app/levels_editor.html"), name="levels_editor"),
     
     path('creatures', views.CreaturesListView.as_view(), name ="creatures"),
+    path('gallery', views.GalleryView.as_view(), name = "gallery"),
+
     path('article<int:pk>', views.ArticleView.as_view(), name = "article"),
     
     path('test_galazar404', lambda request: render(request, "sh_app/galazar404.html"), name="test_galazar404"),
