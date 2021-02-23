@@ -25,6 +25,16 @@ class CreaturesListView(generic.ListView):
     def get_queryset(self):
         return Article.objects.filter(article_type=Article.SH_CREATURE).order_by('title')
 
+
+class ContentListView(generic.ListView):
+    template_name = "sh_app/content_list.html"
+    context_object_name = "articles_list"
+
+    def get_queryset(self):
+        return Article.objects.order_by('title')
+
+
+
 class GalleryView(generic.ListView):
     template_name = "sh_app/all_gallery.html"
     context_object_name = "gallery"

@@ -23,6 +23,7 @@ urlpatterns = [
     
     path('creatures', views.CreaturesListView.as_view(), name ="creatures"),
     path('gallery', views.GalleryView.as_view(), name = "gallery"),
+    path('content_list', views.ContentListView.as_view(), name = "content_list"),
 
     path('article<int:pk>', views.ArticleView.as_view(), name = "article"),
     

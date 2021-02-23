@@ -1,0 +1,49 @@
+{% extends "sh_app/base.html" %}
+{% load static %}
+
+{% block title %}
+Wszystkie artykuły
+{% endblock %}
+
+{% block article %}
+
+<div class = "sh-article">
+
+<h1 class = "sh-article-title">Wszystkie artykuły</h1>
+
+
+<ul class = "sh-articles-list">
+
+    <li>
+        <a href = "/superhog">Superhog, strona główna opisu gry</a>
+    </li>
+
+    <li>
+        <a href = "/ropucha">Ropucha</a>
+    </li>
+
+    <li>
+        <a href = "/levels_editor">Edytor poziomów do Superhoga</a>
+    </li>
+
+    <li>
+        <a href = "/elephant">Program trąbiący</a>
+    </li>
+
+    <li>
+        <a href = "/gallery">Galeria</a>
+    </li>
+
+    {% for a1 in articles_list %}
+
+    <li>
+        <a href = "/article{{a1.id}}"> {{a1.title}} </a>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+</div>
+
+{% endblock %}
