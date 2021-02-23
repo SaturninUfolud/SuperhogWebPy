@@ -18,7 +18,7 @@ body {
 
  
 .xd {
-    letter-spacing: 20px;
+    letter-spacing: 4vw;
     
     color: rgb(129, 9, 9);
     font-weight: bold;
@@ -333,6 +333,10 @@ Show the link that contains should open and close the topnav (.icon) */
         -webkit-flex-direction: column;
         flex-direction: column;        
     }
+
+    .xd {
+        letter-spacing: normal;
+        }
 
     /* Opcjonalna elementy na dużych ekranach, na małych znikają*/
     .wide_opt {
