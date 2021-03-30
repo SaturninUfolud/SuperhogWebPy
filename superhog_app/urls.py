@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import reverse
@@ -6,6 +6,7 @@ from django.shortcuts import render
 
 
 from . import views
+from . import api
 
 from django.shortcuts import redirect
 
@@ -29,6 +30,7 @@ urlpatterns = [
     
     path('test_galazar404', lambda request: render(request, "sh_app/galazar404.html"), name="test_galazar404"),
     path('test_article<int:article_id>', views.article_page_test, name = "article_test"),
+    #path('api/', include(api.router.urls), name="api"),
 ]
 
 app_name = 'sh_app'
