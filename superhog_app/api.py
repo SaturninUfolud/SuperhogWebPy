@@ -15,6 +15,11 @@ class ArticleSerializer(serializers.HyperlinkedModelSerializer):
         exclude = ['gallery']
 
 
+class CreatureSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.Creature
+        fields = ["genus","species", "feed"]
+
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -24,7 +29,12 @@ class ArticleViewSet(viewsets.ModelViewSet):
     queryset = models.Article.objects.all()
     serializer_class = ArticleSerializer
 
+class CreatureViewSet(viewsets.ModelViewSet):
+    queryset = models.Creature.objects.all()
+    serializer_class = CreatureSerializer
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register('users', UserViewSet)
 router.register('articles', ArticleViewSet)
+router.register("creatures", CreatureViewSet)

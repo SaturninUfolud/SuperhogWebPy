@@ -69,3 +69,12 @@ class ArticleSection(models.Model):
 
     def __str__(self):
         return self.title
+
+class Creature(models.Model):
+
+    genus = models.CharField(max_length=30)
+    species = models.CharField(max_length=30)
+    feed = models.CharField(max_length=60, null=True, blank=True)
+
+    def __str__(self):
+        return self.genus.rstrip()+" "+self.species.rstrip()

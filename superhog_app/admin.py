@@ -1,13 +1,15 @@
 from django.contrib import admin
 
-from .models import Article, ArticleSection, ExternalFileInfo
+from . import models
+
+#from .models import Article, ArticleSection, ExternalFileInfo, Creature
 
 
 
 
 
 class ArticleSectionsInline(admin.StackedInline):
-    model = ArticleSection
+    model = models.ArticleSection
     extra = 1
 
 
@@ -24,9 +26,11 @@ class ArticleAdmin(admin.ModelAdmin):
 
     inlines = [ArticleSectionsInline]
 
-admin.site.register(Article,ArticleAdmin)
+admin.site.register(models.Article,ArticleAdmin)
 
 
-admin.site.register(ExternalFileInfo)
+admin.site.register(models.ExternalFileInfo)
+
+admin.site.register(models.Creature)
 
 # Register your models here.
