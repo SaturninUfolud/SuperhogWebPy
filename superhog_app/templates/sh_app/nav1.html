@@ -1,0 +1,35 @@
+
+<nav id = "SH_NAV">
+    <div class="topnav" id="myTopnav">
+        <a href="{% url 'sh_app:index' %}">Home</a>
+
+        <div class="dropdown">
+
+            <button class="dropbtn">Superhog
+                <i class="fa fa-caret-down"></i> </button>
+            
+            <div class ="dropdown-content">
+
+                <a href="{% url 'sh_app:superhog' %}">
+                    O Wieprzu</a>
+                <a href="{% url 'sh_app:levels_editor' %}">
+                    Edytor Poziomów</a>
+                <a href="{% url 'sh_app:creatures' %}">
+                    Potwory</a>
+
+                <a href="{% url 'sh_app:gallery' %}">
+                    Galeria</a>
+
+            </div>
+        </div>
+
+        <a href="{% url 'sh_app:ropucha' %}"> Ropucha </a>
+                
+        <a href="{% url 'sh_app:content_list' %}">Inne</a>
+        <a href="{% url 'sh_app:contact_me' %}">Kontakt</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="navBarOnClick()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</nav>
