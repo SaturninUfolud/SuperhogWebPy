@@ -18,7 +18,7 @@ class ArticleSerializer(serializers.HyperlinkedModelSerializer):
 class CreatureSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Creature
-        fields = ["genus","species", "feed"]
+        fields = ['url', "genus","species", "feed"]
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
