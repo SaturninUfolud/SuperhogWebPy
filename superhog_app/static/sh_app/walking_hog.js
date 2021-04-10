@@ -2,17 +2,17 @@
 
 function walking_hog() {
 
-    var static_hog = document.getElementById("static_hog");
+    let static_hog = document.getElementById("static_hog");
     if (static_hog.style.display == "none") {
         console.log("Hog is already walking");
         return;
     }
-    var hog_posX = 0;
+    let hog_posX = 0;
     static_hog.style.display = "none";
-    var animated_hog = document.getElementById("walking_hog");
+    let animated_hog = document.getElementById("walking_hog");
     animated_hog.style.display = null;
-    var hog_w1 = window.innerWidth;
-    var id = setInterval(frame, 10);
+    let hog_w1 = window.innerWidth;
+    let id = setInterval(frame, 10);
     function frame() {
         if (hog_posX >= window.innerWidth || hog_posX >= hog_w1) {
             clearInterval(id);
