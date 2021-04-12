@@ -4,18 +4,15 @@ from . import models
 
 #from .models import Article, ArticleSection, ExternalFileInfo, Creature
 
-
-
-
-
 class ArticleSectionsInline(admin.StackedInline):
     model = models.ArticleSection
     extra = 1
 
 
-
-
 class ArticleAdmin(admin.ModelAdmin):
+
+    filter_horizontal = ("gallery", )
+
     fieldsets = [
         (None, {'fields': ['title']}),
         (None, {'fields': ['article_type']}),
@@ -25,6 +22,8 @@ class ArticleAdmin(admin.ModelAdmin):
     ]
 
     inlines = [ArticleSectionsInline]
+
+
 
 admin.site.register(models.Article,ArticleAdmin)
 
