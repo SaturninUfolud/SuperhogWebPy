@@ -13,10 +13,10 @@ Plan 9
 <form action="{% url 'sh_app:plan9' %}" method="get">
 
     <label for="p">Podaj p</label>
-    <input name = "p" type="number" autocomplete="off">
+    <input name = "p" type="number" autocomplete="off" required>
 
     <label for="q">Podaj q</label>
-    <input name = "q" type="number" autocomplete="off">
+    <input name = "q" type="number" autocomplete="off" required>
 
     <button type = "submit">submit</button>
     <button type = "reset">reset</button>
@@ -25,10 +25,17 @@ Plan 9
 
 {% if result %}
 
-<p style="font-weight: bold;font-size: 32px;">{{result}}</p>
+<div style="font-weight: bold;font-size: 32px;">
+
+<p> {{p}}/{{q}}</p>
+
+<p >{{result}}</p>
 <p> x = {{x}}</p>
 
 {% endif %}
+
+</div>
+
 
 </div>
 

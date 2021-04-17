@@ -88,13 +88,18 @@ def plan9View(request):
     result = None
     x = 0
 
-    if p is not None and q is not None:
-        result, x = divideToStr1(int(p), int(q))
-
-    else:
-        result = "XXX.YYY"
+    try:
+        if p is not None and q is not None:
+            result, x = divideToStr1(int(p), int(q))
+    except ZeroDivisionError:
+        result = "Nie dziel cholero przez 0!"
+    
+    except ValueError:
+        result = "Podaj inta debilu!"
 
     return render(request, "sh_app/plan9view.html", {
+        "p": p,
+        "q": q,
         "result" : result,
         "x": x,
     })
