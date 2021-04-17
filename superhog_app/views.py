@@ -46,13 +46,13 @@ class GalleryView(generic.ListView):
 def galazar404(request, exception):
     return render(request, 'sh_app/galazar404.html', status=404)
 
-def divideToStr1(p:int,q:int) -> str:
+def divideToStr1(p:int,q:int) -> (str,int):
 
     sr = str(p//q)
     a = p%q
 
     if a == 0:
-        return sr
+        return sr, 0
 
     else:
         sr += "."
@@ -68,8 +68,8 @@ def divideToStr1(p:int,q:int) -> str:
         key = (a, b)
         if key in x:
 
-            i = x[key]
-            return sr + "{}({})".format("".join(y[:i]), "".join(y[i:]))
+            j = x[key]
+            return sr + "{}({})".format("".join(y[:j]), "".join(y[j:])), i - j
 
         else:
             x[key] = i
@@ -77,7 +77,7 @@ def divideToStr1(p:int,q:int) -> str:
         y.append(str(b))
         i += 1
 
-    return sr + "".join(y)
+    return sr + "".join(y), 0
 
 
 def plan9View(request):
@@ -86,15 +86,17 @@ def plan9View(request):
     q = request.GET.get("q")
 
     result = None
+    x = 0
 
     if p is not None and q is not None:
-        result = divideToStr1(int(p), int(q))
+        result, x = divideToStr1(int(p), int(q))
 
     else:
         result = "XXX.YYY"
 
     return render(request, "sh_app/plan9view.html", {
         "result" : result,
+        "x": x,
     })
 
 
