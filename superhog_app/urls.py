@@ -27,6 +27,8 @@ urlpatterns = [
     path('content_list', views.ContentListView.as_view(), name = "content_list"),
 
     path('article<int:pk>', views.ArticleView.as_view(), name = "article"),
+
+    path('plan9', views.plan9View, name="plan9"),
     
     path('test_galazar404', lambda request: render(request, "sh_app/galazar404.html"), name="test_galazar404"),
     path('test_article<int:article_id>', views.article_page_test, name = "article_test"),

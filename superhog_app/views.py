@@ -46,6 +46,59 @@ class GalleryView(generic.ListView):
 def galazar404(request, exception):
     return render(request, 'sh_app/galazar404.html', status=404)
 
+def divideToStr1(p:int,q:int) -> str:
+
+    sr = str(p//q)
+    a = p%q
+
+    if a == 0:
+        return sr
+
+    else:
+        sr += "."
+    
+    x = dict()
+    y = list()
+    i = 0
+    while a!=0:
+        a *= 10
+        b = a//q
+        a %= q
+
+        key = (a, b)
+        if key in x:
+
+            i = x[key]
+            return sr + "{}({})".format("".join(y[:i]), "".join(y[i:]))
+
+        else:
+            x[key] = i
+
+        y.append(str(b))
+        i += 1
+
+    return sr + "".join(y)
+
+
+def plan9View(request):
+
+    p = request.GET.get("p")
+    q = request.GET.get("q")
+
+    result = None
+
+    if p is not None and q is not None:
+        result = divideToStr1(int(p), int(q))
+
+    else:
+        result = "XXX.YYY"
+
+    return render(request, "sh_app/plan9view.html", {
+        "result" : result,
+    })
+
+
+
 def upload_file(request):
 
     if request.user.is_authenticated:
